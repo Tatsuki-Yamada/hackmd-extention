@@ -5,11 +5,32 @@
   "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": ["https://hackmd.io/*"],
-      "js": ["content_script.js"]
+      "matches": [
+        "https://hackmd.io/*",
+        "http://localhost:3000/*"
+      ],
+      "js": [
+        "content_script.js",
+        "jquery-3.7.1.min.js",
+        "jstree.min.js"
+      ],
+      "css": [
+        "style.min.css",
+        "style.css"
+      ]
     }
   ],
   "permissions": [
     "storage"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "throbber.gif"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
   ]
 }
