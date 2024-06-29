@@ -162,6 +162,8 @@ function buildFolderStructure(urls) {
     return structure;
 }
 
+
+// フォルダ要素を作成する関数
 function createFolderElement(name, children) {
     const folderElement = document.createElement('li');
     folderElement.classList.add('folder');
@@ -185,15 +187,15 @@ function createFolderElement(name, children) {
     const childList = document.createElement('ul');
     childList.classList.add('hidden');
     for (const key in children) {
-        if (children[key].link) {
-            childList.appendChild(createFileElement(key, children[key].link));
-        } else {
+        if (key.includes('/')) {
             childList.appendChild(createFolderElement(key, children[key]));
+        } else {
+            childList.appendChild(createFileElement(key, children[key].link));
         }
     }
     folderElement.appendChild(childList);
 
-    // クリックで展開・折りたたみ
+    // クリックでフォルダを展開・折りたたみ
     folderElement.addEventListener('click', function (e) {
         e.stopPropagation();
         childList.classList.toggle('hidden');
@@ -207,6 +209,7 @@ function createFolderElement(name, children) {
     return folderElement;
 }
 
+// ファイル要素を作成する関数
 function createFileElement(name, link) {
     const fileElement = document.createElement('li');
     fileElement.classList.add('file');

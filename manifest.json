@@ -10,12 +10,9 @@
         "http://localhost:3000/*"
       ],
       "js": [
-        "content_script.js",
-        "jquery-3.7.1.min.js",
-        "jstree.min.js"
+        "content_script.js"
       ],
       "css": [
-        "style.min.css",
         "style.css"
       ]
     }
