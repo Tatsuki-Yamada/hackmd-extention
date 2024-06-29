@@ -22,15 +22,5 @@
   ],
   "permissions": [
     "storage"
-  ],
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "throbber.gif"
-      ],
-      "matches": [
-        "*://*/*"
-      ]
-    }
   ]
 }

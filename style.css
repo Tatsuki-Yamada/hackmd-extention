@@ -4,3 +4,66 @@
     padding: 8px;
     text-decoration: none;
 }
+
+/*.folder {*/
+/*    display: block;*/
+/*    color: #fff;*/
+/*    padding: 8px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/* リセット用のスタイル */
+ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style-type: none;
+}
+
+/* フォルダのスタイル */
+.folder {
+    cursor: pointer;
+    margin-left: 10px; /* 必要に応じて調整 */
+}
+
+/* ファイルのスタイル */
+.file a {
+    text-decoration: none;
+    color: blue; /* 必要に応じて調整 */
+}
+
+/* 隠し要素のスタイル */
+.hidden {
+    display: none;
+}
+
+/* インデントを調整 */
+.folder ul {
+    margin-left: 20px; /* 必要に応じて調整 */
+}
+
+/* サイドメニュー全体のスタイル */
+.extension-menu {
+    padding: 10px; /* 必要に応じて調整 */
+/*    color: white;*/
+    overflow-y: auto;
+    background-color: #f8f8f8;
+    position: absolute;
+    z-index: 9999;
+    border-color: #e7e7e7;
+}
+
+.extention-border {
+    border: none;
+    border-top: 1px solid #e7e7e7;
+    margin: 10px 0;
+}
+
+.extention-add-url-button {
+    display: block;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: .25em;
+}
